@@ -46,5 +46,6 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-auth:22.2.0")
     implementation ("com.airbnb.android:lottie:3.6.1")
+    implementation ("it.sephiroth.android.library.bottomnavigation:bottom-navigation:2.0.1-rc1")
 
 }
