@@ -5,24 +5,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.accountFragment;
+import com.example.myapplication.addFragment;
+import com.example.myapplication.homeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import frgments.Homefrag;
+
 
 public class MainActivity extends AppCompatActivity implements
         BottomNavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView bottomNavigationView;
+    ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        img = findViewById(R.id.imageView);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Map.class);
+                startActivity(i);
+            }
+        });
     }
     @Override
     protected void onResume() {
@@ -34,13 +49,15 @@ public class MainActivity extends AppCompatActivity implements
 
         if(itemId == R.id.home){
             Toast.makeText(MainActivity.this, "home clicked", Toast.LENGTH_SHORT).show();
-            //replaceFragment(new Homefrag());
+            replaceFragment(new homeFragment());
             return true;
         }else if(itemId == R.id.add){
             Toast.makeText(MainActivity.this, "Add clicked", Toast.LENGTH_SHORT).show();
+            replaceFragment(new addFragment());
             return true;
         }else if(itemId == R.id.acc){
             Toast.makeText(MainActivity.this, "Account clicked", Toast.LENGTH_SHORT).show();
+            replaceFragment(new accountFragment());
             return true;
         }
         return false;
