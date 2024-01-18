@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "497847954611",
+    "project_id": "vapro-5f6d7",
+    "storage_bucket": "vapro-5f6d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497847954611:android:91f2a0a963e16525bd14c6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkj257bUi0zL1mS0Cw632Kod9-oxd6eU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
